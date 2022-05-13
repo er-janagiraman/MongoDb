@@ -1,0 +1,31 @@
+1).list db --> show dbs
+2).create db --> use database_name
+3).delect db --> db.dropDropbase()
+4).create collection(table) --> db.createCollection('collection_name')
+5).list collecction --> show collections
+6).delete collection --> db.collection_name.drop()
+7).other way create collection --> db.collection_name.insert({Name:"John",Age:24})
+8).list data --> db.collection_name.find()
+9).pretty means data show on json format ex: db.collection_name.find().pretty()
+10).insert id --> db.collection_name.insert({id:1,name:"Johnny",age:25})
+11).count --> db.collection_name.find().count()
+12).insertOne --> db.collection_name.insertOne({Name:"xyz",age:22}) 
+13).insertMany (use [] )--> db.collection_name.insertMany([{Name:"sd",age:11},{Name:"sd",age:11},{Name:"sd",age:11}])
+14).list coloum --> db.collection_name.find({name:"john"}).pretty()
+15).condition > (gt) (use $ ) --> db.collection_name.find({Age:{$gt:30}}).pretty()
+16).condition >= (gte) (use $ ) --> db.collection_name.find({Age:{$gte:30}}).pretty()
+17).condition < (lt) (use $ ) --> db.collection_name.find({Age:{$lt:30}}).pretty()
+18).condition <= (lte) (use $ ) --> db.collection_name.find({Age:{$lte:30}}).pretty()
+19).condition == (eq) (use $ ) --> db.collection_name.find({Age:{$eq:30}}).pretty()
+20).condition && (and) (use $ ) --> db.collection_name.find({$and:[{name:"john"},{age:20}]}).pretty()
+21).condition || (or) (use $ ) --> db.collection_name.find({$or:[{name:"john"},{age:20}]}).pretty()
+21).condition in (in) (use $ ) --> db.collection_name.find({$in:[{name:"john","billa"}]}).pretty()
+22).condition not in (nin) (use $ ) --> db.student.find({Name:{$nin:["Phil","Alan"]}}).pretty()
+23).condition ! (gnot) (use $ ) --> db.collection_name.find({$not:[{name:"john","johnny"}]}).pretty()
+24).update --> db.collection_name.update({name:"john"},{$set:{country:"Russia"} })  
+25).sort --> db.collection_name.find().sort({"age":1}).pretty()  // 1 means ascending , -1 means descending
+26).projection (find({},{}) 2nd parameter ) --> db.collection_name.find({name:"Ben"},{"city":1}).pretty() //1 means show a data , 0 can't show data
+27).delete data --> db.collection_name.deleteOne({name:"John"})
+28).delete data many -->db.collection_name.deleteMany({name:"Johnny",name:"Billa"}) //delete means delete a single value in dulpicate
+29).remove --> db.collection_name.remove({name:"billa"})  //delete means delete as multiple value in duplicate
+30).remove --> db.collection_name.remove({name:"billa"},1) //1 means delete as single value in duplicate
